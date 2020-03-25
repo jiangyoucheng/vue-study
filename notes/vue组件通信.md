@@ -4,7 +4,7 @@
 
    用于父给子传值
 
-   ```javascript
+   ```vue
    // child
    props: { msg: String }
 
@@ -16,7 +16,7 @@
 
    用于子给父传值
 
-   ``````javascript
+   ``````vue
    // child
    this.$emit('add',good)
 
@@ -28,7 +28,7 @@
 
    这种方法通过一个空的Vue实例作为中央事件总线，用它来触发事件和监听事件，可以实现任何组件间的通信，包括父子、兄弟、跨级。
 
-   ``````javascript
+   ``````vue
    // main.js
    Vue.prototype.$bus = new Vue()
 
@@ -49,7 +49,7 @@
 
    兄弟组件之间通信可通过共同祖辈搭桥，$parent或$root
 
-   ``````javascript
+   ``````vue
    // brother1
    this.$parent.$on('foo', handle)
 
@@ -75,7 +75,7 @@
 
    获取子节点引用
 
-   ``````javascript
+   ``````vue
    // parent
    <helloWorld ref="foo"></helloWorld>
 
@@ -94,7 +94,7 @@
 
    > 包含了父作用域中的（不含.native修饰器的）``v-on``事件监听器。它可以通过``v-on="$listeners"``传入内部组件--在创建更高层次的组件时非常有用。
 
-   ``````javascript
+   ``````vue
    // child
    <p>{{$attrs.foo}}</p>
    <p>{{$attrs.bar}}</p>
@@ -114,7 +114,7 @@
 
    可实现祖先和后代之间传值。
 
-   ``````javascript
+   ``````vue
    // parent
    provide() {
        return { foo: 'foo' }
