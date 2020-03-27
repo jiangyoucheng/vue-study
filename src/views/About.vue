@@ -1,5 +1,17 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <kForm></kForm>
   </div>
 </template>
+
+<script>
+import kForm from "@/components/kform";
+export default {
+  components: {
+    kForm
+  }
+};
+</script>
+
+<style>
+</style>

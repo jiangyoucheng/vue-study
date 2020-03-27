@@ -12,24 +12,23 @@
 export default {
   props: { msg: String },
   methods: {
-      sendMsg(){
-          this.$emit('send','msg from child1')
-      },
-      toChild2() {
-          this.$parent.$emit('bar', 'msg from child1')
-      },
-      sayHello() {
-          console.log('hello')
-      }
+    sendMsg() {
+      this.$emit("send", "msg from child1");
+    },
+    toChild2() {
+      this.$parent.$emit("bar", "msg from child1");
+    },
+    sayHello() {
+      console.log("hello");
+    }
   },
   mounted() {
-      this.$bus.$on('foo',msg => {
-          console.log('child1', msg)
-      })
+    this.$bus.$on("foo", msg => {
+      console.log("child1", msg);
+    });
   }
-}
+};
 </script>
 
 <style>
-
 </style>
