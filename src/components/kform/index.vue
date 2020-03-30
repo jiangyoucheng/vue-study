@@ -20,7 +20,6 @@
 import kInput from "./kInput";
 import kFormItem from "./kFormItem";
 import kForm from "./kForm";
-import notice from '@/components/nocice';
 export default {
   data() {
     return {
@@ -42,7 +41,7 @@ export default {
   methods: {
     login() {
       this.$refs.loginForm.validate(valid => {
-        const nt = this.$create(notice, {
+        const nt = this.$notice( {
             title: '提示',
             message: valid ? '请求登录' : '校验失败',
             duration: 2000
