@@ -4,7 +4,7 @@
     <!-- <communication></communication>
     <slots></slots> -->
     <p>count：{{$store.state.count}}</p>
-    <p>doubleCount：{{$store.getters.doubleCount}}</p>
+    <!-- <p>doubleCount：{{$store.getters.doubleCount}}</p> -->
     <button @click="minus">-</button>
     <button @click="add">+</button>
     <button @click="addAsyn">异步增加</button>
