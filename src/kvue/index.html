@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h3 k-html="html"></h3>
+        <p k-text="msg"></p>
+        <p>{{count}}</p>
+    </div>
+    <script src="./compile.js"></script>
+    <script src="./kvue.js"></script>
+    <script>
+    const app = new KVue({
+        el: '#app',
+        data: {
+            count: 1,
+            html: '<h3>hello KVue',
+            msg: 'hello KVue'
+        }
+    })
+    setInterval(() => {
+        app.count++;
+    },1000)
+    </script>
+</body>
+</html>
