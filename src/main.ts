@@ -4,6 +4,8 @@ import router from './krouter';
 import store from './kStore';
 import create from './utils/create';
 
+import './test-ts.ts';
+
 Vue.config.productionTip = false;
 
 // 将create方法挂载到Vue实例的原型上
